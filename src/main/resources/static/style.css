@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+h1 {
+	color: blue;
+	letter-spacing: 10px;
+    font-style: italic;
+}
+
+.input-form {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+fieldset { 
+    display: flex;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px solid black;
+    align-items: center;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+flex-direction: column;
+background-color: lightblue;
+}
