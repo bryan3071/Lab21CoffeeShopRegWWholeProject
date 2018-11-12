@@ -22,13 +22,19 @@ public class Coffeecontroller {
 	@RequestMapping("/hello")
 	public ModelAndView showHello(@RequestParam("first")String first,
 			@RequestParam("last") String last,
-			@RequestParam("phonenumber") String phonenumber)
+			@RequestParam("phonenumber") String phonenumber,
+			@RequestParam("email")String email,
+			@RequestParam("favorite")String favorite)
+			
 	
 	 {
 	ModelAndView mv=new ModelAndView("hello");
 	mv.addObject("first", first);
 	mv.addObject("last", last);
 	mv.addObject("phonenumber",phonenumber);
+	mv.addObject("email", email);
+	mv.addObject("favorite", favorite);
+	
 	return mv;
 	}
 	
