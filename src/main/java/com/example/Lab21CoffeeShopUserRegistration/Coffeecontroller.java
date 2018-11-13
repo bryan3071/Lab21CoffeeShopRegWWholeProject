@@ -15,6 +15,7 @@ public class Coffeecontroller {
 	
 	@Autowired
 	//private MenuItemDao menuItemDao;
+	private MenuItemDao menuItemDao;
 	private MenuService menuService;
 
 	@RequestMapping("/")
@@ -32,6 +33,7 @@ public class Coffeecontroller {
 	@RequestMapping("/menuservice")
 	public ModelAndView showMenuService() {
 		ModelAndView mv=new ModelAndView("menuservice");
+		mv.addObject("menuService",menuItemDao.findAll() );
 		return mv;
 	}
 	
@@ -55,7 +57,7 @@ public class Coffeecontroller {
 	public ModelAndView showMenuService (@RequestParam (name="category", required = false) String category ) {
 		
 		ModelAndView mav = new ModelAndView("menuservice");
-		mav.addObject("MenuItem",menuService.getMenu() );
+		mav.addObject("MenuItem",menuItemDao.findAll() );
 		return mav;
 	}
 	
