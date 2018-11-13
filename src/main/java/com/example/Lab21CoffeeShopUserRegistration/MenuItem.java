@@ -1,6 +1,20 @@
 package com.example.Lab21CoffeeShopUserRegistration;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="menu_item")
+
+
 public class MenuItem {
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id") // name of SQL column
+	
 Long id;
 String name;
 String description;

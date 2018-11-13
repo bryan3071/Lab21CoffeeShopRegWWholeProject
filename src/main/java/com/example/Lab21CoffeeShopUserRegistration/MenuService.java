@@ -11,6 +11,7 @@ public class MenuService {
 
 	private List<Drinks> menuService = new ArrayList<>();
 	
+	//Whole class no longer needed with JDBC databases
 	public MenuService() {
 		menuService.add(new Drinks("Iced Tea", "Chilled Sweetened Tea", 2.00));
 		menuService.add(new Drinks("Expresso Beverage", "Concentrated Form of Coffee", 3.00));
