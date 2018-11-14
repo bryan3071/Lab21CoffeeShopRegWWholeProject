@@ -21,4 +21,9 @@ public class MenuItemDao {
 		return em.createQuery("FROM MenuItem", MenuItem.class).getResultList();
 		
 	}
+
+	public void create(MenuItem menuItem) {
+		// TODO Auto-generated method stub
+		em.persist(menuItem);
+	}
 }

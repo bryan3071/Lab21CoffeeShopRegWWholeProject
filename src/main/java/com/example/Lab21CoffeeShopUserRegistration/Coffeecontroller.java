@@ -67,5 +67,13 @@ public class Coffeecontroller {
 		ModelAndView madmin = new ModelAndView("menuservice");
 		madmin.addObject("menuService", menuItemDao.findAll());
 		return madmin;
+	
+	}
+	@RequestMapping("/add-drink")
+	public ModelAndView showAddDrink(MenuItem menuItem ) {
+		ModelAndView mav2 = new ModelAndView("menuservice");
+		menuItemDao.create(menuItem);
+		mav2.addObject ("menuService", menuItemDao.findAll());
+		return mav2;
 	}
 }
