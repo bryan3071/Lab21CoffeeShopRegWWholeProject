@@ -5,8 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+
 
 
 
@@ -76,4 +79,31 @@ public class Coffeecontroller {
 		mav2.addObject ("menuService", menuItemDao.findAll());
 		return mav2;
 	}
+	
+//	// path variable required to identify which food we're editing
+//		@RequestMapping("/food/update")
+//		public ModelAndView showEditForm(@RequestParam("id") Long id) {
+//			ModelAndView mav = new ModelAndView("food-form");
+//			mav.addObject("food", MenuItemDao.findById(id));
+//			mav.addObject("title", "Edit Food");
+//			return mav;
+//		}
+		
+//		// same URL but different method
+//		@RequestMapping(value="/menuservice/update", method=RequestMethod.POST)
+//		public ModelAndView submitEditForm(MenuItem food) {
+//			MenuItemDao.update(food);
+//			return new ModelAndView("redirect:/menuservice");
+//		}
+//		
+		@RequestMapping("/delete")
+		public ModelAndView delete(@RequestParam("id") Long id) {
+			ModelAndView mv=new ModelAndView("menuservice");
+			menuItemDao.delete(id);
+			mv.addObject("list", menuItemDao.findById(id));
+			return mv;
+		}
+	
 }
+
+
