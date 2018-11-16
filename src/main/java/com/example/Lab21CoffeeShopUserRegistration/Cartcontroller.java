@@ -17,7 +17,7 @@ public class Cartcontroller {
 	@RequestMapping("/cart")
 	public ModelAndView showcart() {
 		ModelAndView mv=new ModelAndView("cart");
-		mv.addObject("cartItem",CartItemDao.findAll());
+		mv.addObject("cartItem",cart.findAll());
 		return mv;
 	}
 
