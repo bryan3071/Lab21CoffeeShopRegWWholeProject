@@ -12,20 +12,20 @@ public class User {
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String first_name;
-	private String last_name;
+	private String firstName;
+	private String lastName;
 	private String email;
-	private String phone_number;
+	private String phoneNumber;
 	private String password;
 	private String favoriteCoffeeBeverage;
-	public User(Long id, String first_name, String last_name, String email, String phone_number, String password,
+	public User(Long id, String firstName, String lastName, String email, String phoneNumber, String password,
 			String favoriteCoffeeBeverage) {
 		super();
 		this.id = id;
-		this.first_name = first_name;
-		this.last_name = last_name;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.email = email;
-		this.phone_number = phone_number;
+		this.phoneNumber = phoneNumber;
 		this.password = password;
 		this.favoriteCoffeeBeverage = favoriteCoffeeBeverage;
 	}
@@ -39,17 +39,17 @@ public class User {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public String getEmail() {
 		return email;
@@ -57,11 +57,11 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhone_number() {
-		return phone_number;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
-	public void setPhone_number(String phone_number) {
-		this.phone_number = phone_number;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 	public String getPassword() {
 		return password;
@@ -77,8 +77,8 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email
-				+ ", phone_number=" + phone_number + ", password=" + password + ", favoriteCoffeeBeverage="
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", phoneNumber=" + phoneNumber + ", password=" + password + ", favoriteCoffeeBeverage="
 				+ favoriteCoffeeBeverage + "]";
 	}
 	

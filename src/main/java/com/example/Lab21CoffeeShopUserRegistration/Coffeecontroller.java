@@ -64,6 +64,13 @@ public class Coffeecontroller {
 		return mav;
 	}
 	
+	@RequestMapping("/custservice")
+	public ModelAndView showCustMenu() {
+		ModelAndView mv=new ModelAndView("custmenu");
+		mv.addObject("menuService",menuItemDao.findAll() );
+		return mv;
+	}
+	
 	@RequestMapping("/admin")
 	public ModelAndView showAdminPage() {
 	
