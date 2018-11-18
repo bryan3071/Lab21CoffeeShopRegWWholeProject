@@ -96,20 +96,21 @@ public class Coffeecontroller {
 //			return mav;
 //		}
 		
-//		// same URL but different method
+//	// commenting out to test	
+	// same URL but different method
 //		@RequestMapping(value="/menuservice/update", method=RequestMethod.POST)
 //		public ModelAndView submitEditForm(MenuItem food) {
 //			MenuItemDao.update(food);
 //			return new ModelAndView("redirect:/menuservice");
 //		}
 //		
-		@RequestMapping("/delete")
-		public ModelAndView delete(@RequestParam("id") Long id) {
-			ModelAndView mv=new ModelAndView("menuservice");
-			menuItemDao.delete(id);
-			mv.addObject("list", menuItemDao.findById(id));
-			return mv;
-		}
+//		
+	@RequestMapping("/food/delete")
+	public ModelAndView delete(@RequestParam("id") Long id) {
+		MenuItemDao.delete(id);
+		return new ModelAndView("redirect:/food");
+	}
+	
 	
 }
 

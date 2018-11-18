@@ -33,6 +33,11 @@ public class MenuItemDao {
 		em.persist(menuItem);
 	}
 	
+	
+	
+	
+	
+	// commenting this out for test for delete step
 	public void delete(Long id) {
 		// Deleting with Hibernate entity manager requires fetching a reference first.
 		MenuItem menuItem = em.getReference(MenuItem.class, id);
