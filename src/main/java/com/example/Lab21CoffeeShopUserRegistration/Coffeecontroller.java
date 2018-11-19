@@ -107,7 +107,7 @@ public class Coffeecontroller {
 //		
 	@RequestMapping("/food/delete")
 	public ModelAndView delete(@RequestParam("id") Long id) {
-		MenuItemDao.delete(id);
+		menuItemDao.delete(id);
 		return new ModelAndView("redirect:/food");
 	}
 	
